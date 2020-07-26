@@ -1,0 +1,28 @@
+@import 'styles/variables';
+
+.ChatLayout {
+  background: $color-gallery-grey;
+  height: 100%;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 768px;
+    padding: 24px 0;
+    margin: 0 auto;
+  }
+
+  &__messages {
+    border-radius: 2px;
+    background: #fff;
+    flex: 1 1 auto;
+  }
+
+  &__input-container {
+    border-radius: 2px;
+    background: #fff;
+    flex: 0 0 150px;
+    margin: 24px 0 0 0;
+  }
+}

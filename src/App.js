@@ -1,7 +1,5 @@
 import React from 'react'
 
-import './App.scss'
+import ChatLayout from 'components/chat/chat-layout'
 
-export default () => (
-  <span>Hello world!</span>
-)
+export default () => <ChatLayout />
