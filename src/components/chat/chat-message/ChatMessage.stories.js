@@ -1,12 +1,17 @@
 import React from 'react'
-import { addDecorator } from '@storybook/react'
+import { text, withKnobs } from '@storybook/addon-knobs'
 
-import { decoratorGlobalStyles } from 'stories/decorators'
+import { decoratorGlobalStyles, decoratorContainer } from 'stories/decorators'
 
 import ChatMessage from './index'
 
-addDecorator(decoratorGlobalStyles)
+export default {
+  title: 'ChatMessage',
+  decorators: [
+    decoratorGlobalStyles,
+    decoratorContainer,
+    withKnobs,
+  ],
+}
 
-export default { title: 'ChatMessage' }
-
-export const withMessage = () => <ChatMessage message="Hello world!" />
+export const withMessage = () => <ChatMessage message={text('message', 'Hello world')} />
