@@ -14,15 +14,25 @@
   }
 
   &__messages {
+    padding: 20px;
     border-radius: 2px;
     background: #fff;
     flex: 1 1 auto;
   }
 
   &__input-container {
+    display: flex;
     border-radius: 2px;
     background: #fff;
     flex: 0 0 150px;
     margin: 24px 0 0 0;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+  }
+
+  &__send-message {
+    flex: 0 0 100px;
   }
 }

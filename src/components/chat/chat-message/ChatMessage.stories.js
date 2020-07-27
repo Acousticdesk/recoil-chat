@@ -14,4 +14,4 @@ export default {
   ],
 }
 
-export const withMessage = () => <ChatMessage message={text('message', 'Hello world')} />
+export const withMessage = () => <ChatMessage>{text('message', 'Hello world')}</ChatMessage>
