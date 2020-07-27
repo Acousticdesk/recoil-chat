@@ -9,7 +9,11 @@ import './styles.scss'
 export default () => (
   <div className="ChatLayout">
     <div className="ChatLayout__container">
-      <h3>Recoil chat by letconst</h3>
+      <h3>
+        Recoil chat by letconst
+        &nbsp;
+        <span aria-label="message icon" role="img">💬</span>
+      </h3>
       <div className="ChatLayout__messages">
         <ChatMessages />
       </div>
