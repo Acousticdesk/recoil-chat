@@ -1,26 +1,15 @@
 import React from 'react'
 import classNames from 'classnames'
-import { useRecoilState } from 'recoil'
 
-import { newChatMessageState, chatMessagesState } from '../recoil/atoms'
 import './styles.scss'
+import { useSendMessage } from '../hooks'
 
 export default ({ className }) => {
-  const [newMessage, setNewMessage] = useRecoilState(newChatMessageState)
-  const [messages, setMessages] = useRecoilState(chatMessagesState)
-
-  const handleSendClick = () => {
-    if (!newMessage) {
-      return
-    }
-
-    setMessages([...messages, newMessage])
-    setNewMessage('')
-  }
+  const sendMessage = useSendMessage()
 
   return (
     <button
-      onClick={handleSendClick}
+      onClick={sendMessage}
       className={classNames('ChatSendMessage', className)}
     >
       Send
