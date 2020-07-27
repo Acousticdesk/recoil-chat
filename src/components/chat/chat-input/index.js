@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classNames from 'classnames'
+import { useRecoilState } from 'recoil'
 
+import { newChatMessageState } from '../recoil/atoms'
 import './styles.scss'
 
 export default ({ className }) => {
-  const [message, setMessage] = useState('')
+  const [newMessage, setNewMessageText] = useRecoilState(newChatMessageState)
 
-  const handleInput = (e) => setMessage(e.target.value)
+  const handleInput = (e) => setNewMessageText(e.target.value)
 
   return (
     <textarea
       className={classNames('ChatInput', className)}
-      value={message}
+      value={newMessage}
       onChange={handleInput}
     />
   )
